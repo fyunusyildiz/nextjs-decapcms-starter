@@ -1,0 +1,21 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "about"
+    label: "About"
+    folder: "content/about"
+    create: false
+    slug: "{{slug}}"
+    summary: "About"
+    fields:
+      - { label: "About Title", name: "about_title", widget: "string" }
+      - {
+          label: "About Description",
+          name: "about_description",
+          widget: "markdown",
+        }
